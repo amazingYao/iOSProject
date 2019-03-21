@@ -19,4 +19,8 @@ pod 'XHLaunchAd'
 pod 'SDCycleScrollView','~> 1.75'
 pod 'TZImagePickerController'
 
+pod 'AMap3DMap'
+pod 'AMapSearch'
+pod 'AMapLocation'
+
 end

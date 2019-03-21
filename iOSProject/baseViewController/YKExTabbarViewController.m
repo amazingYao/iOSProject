@@ -11,6 +11,7 @@
 
 #import "YKHomeViewController.h"
 #import "YKTabTwoViewController.h"
+#import "YKThreeViewController.h"
 
 #import "YKBaseNavigationController.h"
 @interface YKExTabbarViewController ()
@@ -31,9 +32,9 @@
     [self setValue:[[YKTabBar alloc] init] forKeyPath:@"tabBar"];
 }
 -(void)setupAllChild{
-    [self setChildViewControllerWithNavi:[[YKHomeViewController alloc]init] title:@"首页" image:@"com_tab_bt1_normal" selectImage:@"com_tab_bt1_select"];
+    [self setChildViewControllerWithNavi:[[YKHomeViewController alloc]init] title:@"视图" image:@"com_tab_bt1_normal" selectImage:@"com_tab_bt1_select"];
     [self setChildViewControllerWithNavi:[[YKTabTwoViewController alloc]init] title:@"功能" image:@"com_tab_bt1_normal" selectImage:@"com_tab_bt1_select"];
-//    [self setChildViewControllerWithNavi:[[ZBTableViewController alloc]init] title:@"网络" image:@"tab_icon3" selectImage:@"tab_icon3_selected"];
+    [self setChildViewControllerWithNavi:[[YKThreeViewController alloc]init] title:@"SDK" image:@"com_tab_bt1_normal" selectImage:@"com_tab_bt1_select"];
 //    [self setChildViewControllerWithNavi:[[ZBCollectionViewController alloc]init] title:@"我的" image:@"tab_icon4" selectImage:@"tab_icon4_selected"];
 }
 

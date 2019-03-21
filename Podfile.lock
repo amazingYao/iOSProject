@@ -14,6 +14,13 @@ PODS:
   - AFNetworking/Serialization (3.0.4)
   - AFNetworking/UIKit (3.0.4):
     - AFNetworking/NSURLSession
+  - AMap3DMap (6.3.1):
+    - AMapFoundation (~> 1.5)
+  - AMapFoundation (1.5.3)
+  - AMapLocation (2.6.0):
+    - AMapFoundation (~> 1.4)
+  - AMapSearch (6.1.1):
+    - AMapFoundation (~> 1.4)
   - FLAnimatedImage (1.0.12)
   - Masonry (1.1.0)
   - MJExtension (3.0.15.1)
@@ -32,6 +39,9 @@ PODS:
 
 DEPENDENCIES:
   - AFNetworking (~> 3.0.0)
+  - AMap3DMap
+  - AMapLocation
+  - AMapSearch
   - Masonry
   - MJExtension
   - MJRefresh
@@ -46,6 +56,10 @@ DEPENDENCIES:
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - AFNetworking
+    - AMap3DMap
+    - AMapFoundation
+    - AMapLocation
+    - AMapSearch
     - FLAnimatedImage
     - Masonry
     - MJExtension
@@ -60,6 +74,10 @@ SPEC REPOS:
 
 SPEC CHECKSUMS:
   AFNetworking: a0075feb321559dc78d9d85b55d11caa19eabb93
+  AMap3DMap: 7e1b2f2a1628a584f085d7f158d7c9835837e8c2
+  AMapFoundation: 58f883c80754c659cf626deb3150936bfe8f1772
+  AMapLocation: 55116a2c8956eab7550cbb56e989aa5cdcc424e3
+  AMapSearch: 3dcbf85c403a2a0fe0eda5318caabc272b31f5e1
   FLAnimatedImage: 4a0b56255d9b05f18b6dd7ee06871be5d3b89e31
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
   MJExtension: 19bc33ce2eee2d319760f5622562cf581a6ff756
@@ -72,6 +90,6 @@ SPEC CHECKSUMS:
   TZImagePickerController: 5374a30df056b33428802c8112ed44011fe2596a
   XHLaunchAd: 0dc50c5af00ee5d9e734b9dce6eece7acaa71122
 
-PODFILE CHECKSUM: 20443a2c10775f4b32a48e2bc81a7dbc4bff1f85
+PODFILE CHECKSUM: 0fd9de0dcd36306bcd06e13fe1dfa7f0fd4f3947
 
 COCOAPODS: 1.5.3

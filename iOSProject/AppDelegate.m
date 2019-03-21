@@ -11,6 +11,7 @@
 #import "YKKZViewController.h"
 #import "YK3DTouchViewController.h"
 #import "XHLaunchAd.h"
+#import <AMapFoundationKit/AMapFoundationKit.h>
 @interface AppDelegate ()
 @end
 
@@ -19,7 +20,7 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     [NSThread sleepForTimeInterval:0.5];
-
+    [AMapServices sharedServices].apiKey = @"e9b3e931741fe6780bb3752a4020908e";
     
     [self setLaunchAdd];
     [self set3DTouch];

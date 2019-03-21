@@ -13,11 +13,13 @@
 #import "YKCollectionViewController.h"
 #import "YKScrollerViewController.h"
 #import "YKLBViewController.h"
+#import "TestViewController.h"
+#import "YKSliderViewController.h"
 
 
 @interface YKHomeViewController ()<UITableViewDelegate,UITableViewDataSource,UITabBarControllerDelegate>
 @property (nonatomic,strong) UITableView *tableV;
-@property (nonatomic,strong) NSMutableArray *dataArr;
+@property (nonatomic,strong) NSArray *dataArr;
 @end
 
 @implementation YKHomeViewController
@@ -35,7 +37,7 @@
 }
 
 -(void)getData{
-    self.dataArr = [NSMutableArray arrayWithObjects:@"tableView",@"collectionView",@"scrollerView",@"webView",@"轮播图", nil];
+    self.dataArr = @[@"tableView",@"collectionView",@"scrollerView",@"webView",@"轮播图", @"选择器",@"进度条"];
      [self.tableV reloadData];
 }
 #pragma mark - 设置APP静态图片引导页
@@ -59,7 +61,7 @@
         _tableV.dataSource = self;
         _tableV.delegate = self;
         _tableV.rowHeight = 50;
-        [_tableV registerClass:[UITableViewCell class] forCellReuseIdentifier:@"cell"];
+//        [_tableV registerClass:[UITableViewCell class] forCellReuseIdentifier:@"cell"];
         [self.view addSubview:self.tableV];
     }
     return _tableV;
@@ -68,10 +70,15 @@
     return self.dataArr.count;
 }
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
-    UITableViewCell *cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"cell"];
-    cell.textLabel.text = [NSString stringWithFormat:@"%ld.%@",indexPath.row + 1,self.dataArr[indexPath.row]];
-    cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
-    cell.selectionStyle = 0;
+    
+    static NSString *ID = @"cell";
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:ID];
+    if (cell == nil) {
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:ID];
+        cell.textLabel.text = [NSString stringWithFormat:@"%ld.%@",indexPath.row + 1,self.dataArr[indexPath.row]];
+        cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+        cell.selectionStyle = 0;
+    }
     return cell;
 }
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
@@ -89,6 +96,12 @@
         [self.navigationController pushViewController:vc animated:YES];
     }else if (indexPath.row == 4){
         YKLBViewController *vc = [[YKLBViewController alloc] init];
+        [self.navigationController pushViewController:vc animated:YES];
+    }else if (indexPath.row == 5){
+        TestViewController *vc = [[TestViewController alloc] init];
+        [self.navigationController pushViewController:vc animated:YES];
+    }else if (indexPath.row == 6){
+        YKSliderViewController *vc = [[YKSliderViewController alloc] init];
         [self.navigationController pushViewController:vc animated:YES];
     }
     

@@ -14,6 +14,8 @@
 #import "YKAdressBookViewController.h"
 #import "YKTakePhotoViewController.h"
 #import "YKCalendarViewController.h"
+#import "YK3DESViewController.h"
+#import "YKButtonViewController.h"
 @interface YKTabTwoViewController ()<UITableViewDelegate,UITableViewDataSource>
 @property (nonatomic,strong) UITableView *tableV;
 @property (nonatomic,strong) NSArray *dataArr;
@@ -28,7 +30,7 @@
     [self getData];
 }
 -(void)getData{
-    self.dataArr = @[@"3DTouch",@"指纹解锁",@"Today Widget 扩展",@"健康",@"通讯录",@"相册",@"文件预览",@"日历"];
+    self.dataArr = @[@"3DTouch",@"指纹解锁",@"Today Widget 扩展",@"健康",@"通讯录",@"相册",@"文件预览",@"日历",@"3DES",@"倒计时按钮"];
     [self.tableV reloadData];
 }
 
@@ -79,6 +81,12 @@
         [self.navigationController pushViewController:vc animated:YES];
     }else if (indexPath.row == 7){
         YKCalendarViewController *vc = [[YKCalendarViewController alloc] init];
+        [self.navigationController pushViewController:vc animated:YES];
+    }else if (indexPath.row == 8){
+        YK3DESViewController *vc = [[YK3DESViewController alloc] init];
+        [self.navigationController pushViewController:vc animated:YES];
+    }else if (indexPath.row == 9){
+        YKButtonViewController *vc = [[YKButtonViewController alloc] init];
         [self.navigationController pushViewController:vc animated:YES];
     }
     
