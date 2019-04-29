@@ -60,6 +60,8 @@
 		5942D2C922433C0100B50D28 /* WLCaptcheButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 5942D2C622433C0100B50D28 /* WLCaptcheButton.m */; };
 		5942D2CD22433E6D00B50D28 /* YKThreeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5942D2CC22433E6D00B50D28 /* YKThreeViewController.m */; };
 		5942D2D12243686000B50D28 /* YKGDMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5942D2D02243686000B50D28 /* YKGDMapViewController.m */; };
+		594387162275874900627349 /* YKImageMaskViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 594387152275874900627349 /* YKImageMaskViewController.m */; };
+		5943871A2275896900627349 /* YKFourViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 594387192275896900627349 /* YKFourViewController.m */; };
 		5944616421B8FC1C000759F6 /* YKTakePhotoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5944616321B8FC1C000759F6 /* YKTakePhotoViewController.m */; };
 		5946967B21AFC1450008978F /* YKCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5946967A21AFC1450008978F /* YKCollectionViewController.m */; };
 		5946967E21AFCD110008978F /* YKCollectionViewVViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5946967D21AFCD110008978F /* YKCollectionViewVViewController.m */; };
@@ -67,6 +69,7 @@
 		5946968421AFD7E20008978F /* YKCollectionVViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5946968221AFD7E20008978F /* YKCollectionVViewCell.xib */; };
 		5946969721AFE58E0008978F /* YKVCHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5946969521AFE58E0008978F /* YKVCHeaderView.m */; };
 		5946969821AFE58E0008978F /* YKVCHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5946969621AFE58E0008978F /* YKVCHeaderView.xib */; };
+		5952CB5022769E21009EC1D1 /* UIImage+WaterMark.m in Sources */ = {isa = PBXBuildFile; fileRef = 5952CB4F22769E20009EC1D1 /* UIImage+WaterMark.m */; };
 		595F1B22224224B10038B026 /* YKCalendarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 595F1B21224224B10038B026 /* YKCalendarViewController.m */; };
 		595F1B3722422A520038B026 /* LXCalendarHearder.xib in Resources */ = {isa = PBXBuildFile; fileRef = 595F1B2522422A500038B026 /* LXCalendarHearder.xib */; };
 		595F1B3822422A520038B026 /* LXCalendarWeekView.m in Sources */ = {isa = PBXBuildFile; fileRef = 595F1B2622422A500038B026 /* LXCalendarWeekView.m */; };
@@ -99,7 +102,6 @@
 		595F1B7C224231F60038B026 /* ASDayPicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 595F1B7B224231F60038B026 /* ASDayPicker.m */; };
 		596252D321B50D8400E3BA5C /* YKLBCustomCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 596252D221B50D8400E3BA5C /* YKLBCustomCell.m */; };
 		596252D721B5191B00E3BA5C /* YKFileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 596252D621B5191B00E3BA5C /* YKFileViewController.m */; };
-		596252DE21B51CD800E3BA5C /* Codelife.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 596252DD21B51CD800E3BA5C /* Codelife.pdf */; };
 		59636F0D21ACDB3C008A78EB /* YKZWViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 59636F0C21ACDB3C008A78EB /* YKZWViewController.m */; };
 		59636F1121ACE668008A78EB /* YKKZViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 59636F1021ACE668008A78EB /* YKKZViewController.m */; };
 		59636F1821ACE744008A78EB /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 59636F1721ACE744008A78EB /* NotificationCenter.framework */; };
@@ -282,6 +284,10 @@
 		5942D2CC22433E6D00B50D28 /* YKThreeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YKThreeViewController.m; sourceTree = "<group>"; };
 		5942D2CF2243686000B50D28 /* YKGDMapViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YKGDMapViewController.h; sourceTree = "<group>"; };
 		5942D2D02243686000B50D28 /* YKGDMapViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YKGDMapViewController.m; sourceTree = "<group>"; };
+		594387142275874900627349 /* YKImageMaskViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YKImageMaskViewController.h; sourceTree = "<group>"; };
+		594387152275874900627349 /* YKImageMaskViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YKImageMaskViewController.m; sourceTree = "<group>"; };
+		594387182275896900627349 /* YKFourViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YKFourViewController.h; sourceTree = "<group>"; };
+		594387192275896900627349 /* YKFourViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YKFourViewController.m; sourceTree = "<group>"; };
 		5944616221B8FC1C000759F6 /* YKTakePhotoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YKTakePhotoViewController.h; sourceTree = "<group>"; };
 		5944616321B8FC1C000759F6 /* YKTakePhotoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YKTakePhotoViewController.m; sourceTree = "<group>"; };
 		5946967921AFC1450008978F /* YKCollectionViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YKCollectionViewController.h; sourceTree = "<group>"; };
@@ -294,6 +300,8 @@
 		5946969421AFE58E0008978F /* YKVCHeaderView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YKVCHeaderView.h; sourceTree = "<group>"; };
 		5946969521AFE58E0008978F /* YKVCHeaderView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YKVCHeaderView.m; sourceTree = "<group>"; };
 		5946969621AFE58E0008978F /* YKVCHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = YKVCHeaderView.xib; sourceTree = "<group>"; };
+		5952CB4E22769E20009EC1D1 /* UIImage+WaterMark.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+WaterMark.h"; sourceTree = "<group>"; };
+		5952CB4F22769E20009EC1D1 /* UIImage+WaterMark.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+WaterMark.m"; sourceTree = "<group>"; };
 		595F1B20224224B10038B026 /* YKCalendarViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YKCalendarViewController.h; sourceTree = "<group>"; };
 		595F1B21224224B10038B026 /* YKCalendarViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YKCalendarViewController.m; sourceTree = "<group>"; };
 		595F1B2422422A4F0038B026 /* LXCalendarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LXCalendarView.h; sourceTree = "<group>"; };
@@ -358,7 +366,6 @@
 		596252D221B50D8400E3BA5C /* YKLBCustomCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YKLBCustomCell.m; sourceTree = "<group>"; };
 		596252D521B5191B00E3BA5C /* YKFileViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YKFileViewController.h; sourceTree = "<group>"; };
 		596252D621B5191B00E3BA5C /* YKFileViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YKFileViewController.m; sourceTree = "<group>"; };
-		596252DD21B51CD800E3BA5C /* Codelife.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = Codelife.pdf; sourceTree = "<group>"; };
 		59636F0B21ACDB3C008A78EB /* YKZWViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YKZWViewController.h; sourceTree = "<group>"; };
 		59636F0C21ACDB3C008A78EB /* YKZWViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YKZWViewController.m; sourceTree = "<group>"; };
 		59636F0F21ACE668008A78EB /* YKKZViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YKKZViewController.h; sourceTree = "<group>"; };
@@ -571,6 +578,7 @@
 		5940543521B4F9E60048A653 /* libraries */ = {
 			isa = PBXGroup;
 			children = (
+				5943871B22758AFE00627349 /* 水印 */,
 				5942D23D22431D7E00B50D28 /* 3DES */,
 				595F1B1C224223C40038B026 /* 日历 */,
 				5944616521B8FF7F000759F6 /* 照片选择 */,
@@ -790,6 +798,24 @@
 			path = "高德地图";
 			sourceTree = "<group>";
 		};
+		594387132275872500627349 /* 图片水印 */ = {
+			isa = PBXGroup;
+			children = (
+				594387142275874900627349 /* YKImageMaskViewController.h */,
+				594387152275874900627349 /* YKImageMaskViewController.m */,
+			);
+			path = "图片水印";
+			sourceTree = "<group>";
+		};
+		5943871B22758AFE00627349 /* 水印 */ = {
+			isa = PBXGroup;
+			children = (
+				5952CB4E22769E20009EC1D1 /* UIImage+WaterMark.h */,
+				5952CB4F22769E20009EC1D1 /* UIImage+WaterMark.m */,
+			);
+			path = "水印";
+			sourceTree = "<group>";
+		};
 		5944616121B8FBF9000759F6 /* 相册 */ = {
 			isa = PBXGroup;
 			children = (
@@ -993,18 +1019,9 @@
 		596252D821B51A5100E3BA5C /* support */ = {
 			isa = PBXGroup;
 			children = (
-				596252D921B51BDD00E3BA5C /* file */,
 				5988E2E221A7A92A008303B1 /* image */,
 			);
 			path = support;
-			sourceTree = "<group>";
-		};
-		596252D921B51BDD00E3BA5C /* file */ = {
-			isa = PBXGroup;
-			children = (
-				596252DD21B51CD800E3BA5C /* Codelife.pdf */,
-			);
-			path = file;
 			sourceTree = "<group>";
 		};
 		59636F0A21ACDB22008A78EB /* 指纹解锁 */ = {
@@ -1101,6 +1118,9 @@
 		596CDA6A21ABFB0900FED294 /* TabFou */ = {
 			isa = PBXGroup;
 			children = (
+				594387182275896900627349 /* YKFourViewController.h */,
+				594387192275896900627349 /* YKFourViewController.m */,
+				594387132275872500627349 /* 图片水印 */,
 			);
 			path = TabFou;
 			sourceTree = "<group>";
@@ -1413,7 +1433,6 @@
 				5988E2F421A7A9AA008303B1 /* image3.jpg in Resources */,
 				595F1B3722422A520038B026 /* LXCalendarHearder.xib in Resources */,
 				5946968421AFD7E20008978F /* YKCollectionVViewCell.xib in Resources */,
-				596252DE21B51CD800E3BA5C /* Codelife.pdf in Resources */,
 				597D516521B7A7B900D4872A /* YKAdressBookTableViewCell.xib in Resources */,
 				5942D27B224328B300B50D28 /* testData1.plist in Resources */,
 				5942D26A2243286C00B50D28 /* BRPickerView.bundle in Resources */,
@@ -1560,6 +1579,7 @@
 				597028D321A78DCE0089EAC1 /* AppDelegate.m in Sources */,
 				5942D282224328DE00B50D28 /* BRInfoModel.m in Sources */,
 				5942D2BE2243353D00B50D28 /* SemiCircleWithTextProgressView.m in Sources */,
+				5952CB5022769E21009EC1D1 /* UIImage+WaterMark.m in Sources */,
 				595F1B7C224231F60038B026 /* ASDayPicker.m in Sources */,
 				5970292121A795C70089EAC1 /* UICollectionView+YKHelper.m in Sources */,
 				595F1B3922422A520038B026 /* LXCalendarMonthModel.m in Sources */,
@@ -1589,6 +1609,7 @@
 				595F1B7822422FB10038B026 /* LXCalendarSixController.m in Sources */,
 				595F1B6A22422F5D0038B026 /* CalenderWeekView.m in Sources */,
 				5970293721A795DB0089EAC1 /* HyperlinksButton.m in Sources */,
+				5943871A2275896900627349 /* YKFourViewController.m in Sources */,
 				593E8C0D21AE258D00FFD2F8 /* YKWKwebViewViewController.m in Sources */,
 				5946967B21AFC1450008978F /* YKCollectionViewController.m in Sources */,
 				595F1B3F22422A520038B026 /* NSDate+GFCalendar.m in Sources */,
@@ -1600,6 +1621,7 @@
 				595F1B4822422A640038B026 /* LXCalendarThreeController.m in Sources */,
 				59636F3121AD1D18008A78EB /* YKKZModel.m in Sources */,
 				5942D26C2243286C00B50D28 /* BRAddressModel.m in Sources */,
+				594387162275874900627349 /* YKImageMaskViewController.m in Sources */,
 				5940541621B4C2C60048A653 /* YKImageLBViewController.m in Sources */,
 				5970292321A795C70089EAC1 /* YKSystem.m in Sources */,
 				5942D24022431FE700B50D28 /* AA3DESManager.m in Sources */,

@@ -7,30 +7,23 @@
 //
 
 #import "YKTabTwoViewController.h"
-#import "YKZWViewController.h"
-#import "YKKZViewController.h"
-#import "YK3DTouchViewController.h"
-#import "YKFileViewController.h"
-#import "YKAdressBookViewController.h"
-#import "YKTakePhotoViewController.h"
-#import "YKCalendarViewController.h"
-#import "YK3DESViewController.h"
-#import "YKButtonViewController.h"
+
 @interface YKTabTwoViewController ()<UITableViewDelegate,UITableViewDataSource>
 @property (nonatomic,strong) UITableView *tableV;
 @property (nonatomic,strong) NSArray *dataArr;
-
+@property (nonatomic,strong) NSArray *viewArr;
 @end
 
 @implementation YKTabTwoViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self titleIS:@"功能"];
+    [self titleIS:@"扩展"];
     [self getData];
 }
 -(void)getData{
     self.dataArr = @[@"3DTouch",@"指纹解锁",@"Today Widget 扩展",@"健康",@"通讯录",@"相册",@"文件预览",@"日历",@"3DES",@"倒计时按钮"];
+    self.viewArr = @[@"3DTouch",@"ZW解锁",@"KZ",@"",@"AdressBook",@"TakePhoto",@"File",@"Calendar",@"3DES",@"Button"];
     [self.tableV reloadData];
 }
 
@@ -59,36 +52,8 @@
     return cell;
 }
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    if (indexPath.row == 0) {
-        YK3DTouchViewController *vc = [[YK3DTouchViewController alloc] init];
-        [self.navigationController pushViewController:vc animated:YES];
-    }else if (indexPath.row == 1){
-        YKZWViewController *vc = [[YKZWViewController alloc] init];
-        [self.navigationController pushViewController:vc animated:YES];
-    }else if (indexPath.row == 2){
-        YKKZViewController *vc = [[YKKZViewController alloc] init];
-        [self.navigationController pushViewController:vc animated:YES];
-    }else if (indexPath.row == 3){
-       
-    }else if (indexPath.row == 4){
-        YKAdressBookViewController *vc = [[YKAdressBookViewController alloc] init];
-        [self.navigationController pushViewController:vc animated:YES];
-    }else if (indexPath.row == 5){
-        YKTakePhotoViewController *vc = [[YKTakePhotoViewController alloc] init];
-        [self.navigationController pushViewController:vc animated:YES];
-    }else if (indexPath.row == 6){
-        YKFileViewController *vc = [[YKFileViewController alloc] init];
-        [self.navigationController pushViewController:vc animated:YES];
-    }else if (indexPath.row == 7){
-        YKCalendarViewController *vc = [[YKCalendarViewController alloc] init];
-        [self.navigationController pushViewController:vc animated:YES];
-    }else if (indexPath.row == 8){
-        YK3DESViewController *vc = [[YK3DESViewController alloc] init];
-        [self.navigationController pushViewController:vc animated:YES];
-    }else if (indexPath.row == 9){
-        YKButtonViewController *vc = [[YKButtonViewController alloc] init];
-        [self.navigationController pushViewController:vc animated:YES];
-    }
+    Class class = NSClassFromString([NSString stringWithFormat:@"YK%@ViewController",self.viewArr[indexPath.row]]);
+    [self.navigationController pushViewController:[class new] animated:YES];
     
 }
 

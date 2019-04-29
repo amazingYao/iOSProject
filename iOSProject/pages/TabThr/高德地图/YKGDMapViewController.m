@@ -11,7 +11,7 @@
 #import <AMapFoundationKit/AMapFoundationKit.h>
 #import <AMapLocationKit/AMapLocationKit.h>
 #import <AMapSearchKit/AMapSearchKit.h>
-@interface YKGDMapViewController ()<AMapLocationManagerDelegate>
+@interface YKGDMapViewController ()<AMapLocationManagerDelegate,MAMapViewDelegate>
 @property (nonatomic,strong) AMapLocationManager *locationManager;
 @end
 
@@ -19,8 +19,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-//    [self getLocation];
-    [self initMap];
+    [self getLocation];
+//    [self initMap];
 }
 //地图
 -(void)initMap{
@@ -31,11 +31,42 @@
     
     _mapView.showsUserLocation = YES;
     _mapView.userTrackingMode = MAUserTrackingModeFollow;
-    _mapView.showsIndoorMap = YES;
+//    _mapView.showsIndoorMap = YES;
+    _mapView.delegate = self;
+    [_mapView setMapType:MAMapTypeStandard];
     
-    [_mapView setMapType:MAMapTypeSatellite];
+    
+    MAPointAnnotation *pointAnnotation = [[MAPointAnnotation alloc] init];
+    pointAnnotation.coordinate = CLLocationCoordinate2DMake(32.49195828, 119.40345486);
+    pointAnnotation.title = @"方恒国际";
+    pointAnnotation.subtitle = @"阜通东大街6号";
+    
+    
+    [_mapView addAnnotation:pointAnnotation];
 }
-//定
+
+
+
+- (MAAnnotationView *)mapView:(MAMapView *)mapView viewForAnnotation:(id <MAAnnotation>)annotation
+{
+    if ([annotation isKindOfClass:[MAPointAnnotation class]])
+    {
+        static NSString *pointReuseIndentifier = @"pointReuseIndentifier";
+        MAPinAnnotationView*annotationView = (MAPinAnnotationView*)[mapView dequeueReusableAnnotationViewWithIdentifier:pointReuseIndentifier];
+        if (annotationView == nil)
+        {
+            annotationView = [[MAPinAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:pointReuseIndentifier];
+        }
+        annotationView.canShowCallout= YES;       //设置气泡可以弹出，默认为NO
+        annotationView.animatesDrop = YES;        //设置标注动画显示，默认为NO
+        annotationView.draggable = YES;        //设置标注可以拖动，默认为NO
+        annotationView.pinColor = MAPinAnnotationColorPurple;
+        return annotationView;
+    }
+    return nil;
+}
+
+
 //定位
 -(void)getLocation{
     self.locationManager = [[AMapLocationManager alloc] init];
@@ -71,10 +102,10 @@
 }
 #pragma mark - delegate
 //持续定位代理方法
-- (void)amapLocationManager:(AMapLocationManager *)manager didUpdateLocation:(CLLocation *)location reGeocode:(AMapLocationReGeocode *)reGeocode{
-    NSLog(@"location:{lat:%f; lon:%f; accuracy:%f}", location.coordinate.latitude, location.coordinate.longitude, location.horizontalAccuracy);
-    if (reGeocode){
-        NSLog(@"reGeocode:%@", reGeocode);
-    }
-}
+//- (void)amapLocationManager:(AMapLocationManager *)manager didUpdateLocation:(CLLocation *)location reGeocode:(AMapLocationReGeocode *)reGeocode{
+//    NSLog(@"location:{lat:%f; lon:%f; accuracy:%f}", location.coordinate.latitude, location.coordinate.longitude, location.horizontalAccuracy);
+//    if (reGeocode){
+//        NSLog(@"reGeocode:%@", reGeocode);
+//    }
+//}
 @end
