@@ -49,9 +49,6 @@
         make.top.offset(NavBar_Height + 50);
     }];
     self.imageV = imageV;
-//    self.imageV.contentMode = UIViewContentModeScaleAspectFit;
-//    self.imageV.layer.borderWidth = 1;
-//    self.imageV.layer.borderColor = [UIColor redColor].CGColor;
 }
 
 -(void)addImage:(UIButton *)button{
@@ -90,19 +87,18 @@
                        options:NSStringDrawingUsesLineFragmentOrigin
                        attributes:@{NSFontAttributeName:TextFont(20)}
                        context:nil].size;
-    
-    
-    
    
     CGPoint point = CGPointMake(baseImage.size.width-strSize.width, baseImage.size.height-strSize.height-strTwoSize.height);
     UIImage *resultImage = [baseImage imageWaterMarkWithString:str point:point attribute:attribute];
     
-     CGPoint pointTwo = CGPointMake(baseImage.size.width-strTwoSize.width, baseImage.size.height-strTwoSize.height);
-     UIImage *resultImageTwo = [resultImage imageWaterMarkWithString:strTwo point:pointTwo attribute:attributeTwo];
-    
-    
+    CGPoint pointTwo = CGPointMake(baseImage.size.width-strTwoSize.width, baseImage.size.height-strTwoSize.height);
+    UIImage *resultImageTwo = [resultImage imageWaterMarkWithString:strTwo point:pointTwo attribute:attributeTwo];
     
     self.imageV.image = resultImageTwo;
+    
+    
+    
+    
 }
 
 //图片水印
