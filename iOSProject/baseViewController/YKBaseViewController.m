@@ -48,7 +48,7 @@
     [publishBtn setTitle:str forState:UIControlStateNormal];
     publishBtn.titleLabel.font = TextFont(15);
     publishBtn.backgroundColor = [UIColor clearColor];
-    [publishBtn setTitleColor:[UIColor redColor] forState:UIControlStateNormal];
+    [publishBtn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
     [publishBtn addTarget:self action:@selector(rightBAction) forControlEvents:UIControlEventTouchUpInside];
     
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:publishBtn];

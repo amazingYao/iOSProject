@@ -29,29 +29,14 @@
 
 -(void)initUI{
     [self titleIS:@"选取照片"];
-    UIButton *btn = [[UIButton alloc] init];
-    [btn setTitle:@"添加照片" forState:0];
-    [btn setTintColor:[UIColor darkTextColor]];
-    [btn setBackgroundColor:[UIColor greenColor]];
-    
-    [btn addTarget:self action:@selector(btnClicked) forControlEvents:UIControlEventTouchUpInside];
-    [self.view addSubview:btn];
-    [btn mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.right.offset(0);
-        make.top.offset(NavBar_Height);
-        make.height.equalTo(@(40));
-    }];
-
-    
+    [self setNavigationRightBarButtonWithString:@"拍摄"];
     [self.view addSubview:self.imgV];
     [self.imgV mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.right.offset(0);
-        make.height.equalTo(@(SCREEN_WIDTH));
-        make.top.equalTo(btn.mas_bottom).offset(50);
+        make.center.equalTo(self.view);
+        make.width.height.equalTo(@300);
     }];
 }
-
--(void)btnClicked{
+-(void)rightBAction{
     UIAlertController *alertVc = [UIAlertController alertControllerWithTitle:nil message:nil preferredStyle:UIAlertControllerStyleActionSheet];
     UIAlertAction *takePhotoAction = [UIAlertAction actionWithTitle:@"拍照" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
         [self takePhoto];
@@ -67,14 +52,10 @@
 }
 
 
+
 - (void)takePhoto{
     
 }
-
-
-
-
-
 
 - (void)pushTZImagePickerController {
     TZImagePickerController *imagePickerVc = [[TZImagePickerController alloc] initWithMaxImagesCount:1 columnNumber:4 delegate:self pushPhotoPickerVc:YES];

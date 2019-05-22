@@ -49,6 +49,8 @@
         make.top.offset(NavBar_Height + 50);
     }];
     self.imageV = imageV;
+    
+    
 }
 
 -(void)addImage:(UIButton *)button{
@@ -95,7 +97,6 @@
     UIImage *resultImageTwo = [resultImage imageWaterMarkWithString:strTwo point:pointTwo attribute:attributeTwo];
     
     self.imageV.image = resultImageTwo;
-    
     
     
     

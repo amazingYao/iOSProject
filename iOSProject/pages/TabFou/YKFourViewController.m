@@ -39,7 +39,7 @@
 }
 
 -(void)getData{
-    self.dataArr = @[@"图片加水印"];
+    self.dataArr = @[@"图片加水印",@"图片水印二",@"修改RootView"];
     [self.tableV reloadData];
 }
 
@@ -62,17 +62,29 @@
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    
-    NSString *str;
     switch (indexPath.row) {
         case 0:
-            str = @"ImageMask";
+            [self pusuView:@"ImageMask"];
             break;
-            
+        case 1:
+            [self pusuView:@"ImageHandle"];
+            break;
+        case 2:
+            [self presectView:@"Reset"];
+            break;
         default:
             break;
     }
-    Class class = NSClassFromString([NSString stringWithFormat:@"YK%@ViewController",str]);
+   
+}
+
+-(void)presectView:(NSString *)name{
+    Class class = NSClassFromString([NSString stringWithFormat:@"YK%@ViewController",name]);
+    [self presentViewController:[class new] animated:YES completion:nil];
+}
+
+-(void)pusuView:(NSString *)name{
+    Class class = NSClassFromString([NSString stringWithFormat:@"YK%@ViewController",name]);
     [self.navigationController pushViewController:[class new] animated:YES];
 }
 

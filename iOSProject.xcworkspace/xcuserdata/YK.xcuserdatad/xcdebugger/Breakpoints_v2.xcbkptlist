@@ -20,7 +20,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "iOSProject/pages/TabThr/&#x9ad8;&#x5fb7;&#x5730;&#x56fe;/YKGDMapViewController.m"
-            timestampString = "578127353.24894"
+            timestampString = "579691652.948338"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "72"
@@ -68,12 +68,44 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "iOSProject/libraries/&#x6c34;&#x5370;/UIImage+WaterMark.m"
-            timestampString = "578213025.500621"
+            timestampString = "579430901.66105"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "59"
             endingLineNumber = "59"
             landmarkName = "-imageWaterMarkWithString:rect:attribute:image:imageRect:alpha:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "iOSProject/libraries/&#x6c34;&#x5370;/UIImage+WaterMark.m"
+            timestampString = "579430901.6611201"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "4"
+            endingLineNumber = "4"
+            landmarkName = "unknown"
+            landmarkType = "0">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "iOSProject/pages/TabFou/&#x56fe;&#x7247;&#x6c34;&#x5370;/YKImageHandleViewController.m"
+            timestampString = "580181156.867751"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "71"
+            endingLineNumber = "71"
+            landmarkName = "-handleImage:"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
